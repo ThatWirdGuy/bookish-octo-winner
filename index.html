@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MW Emulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="toolbar">
+        <input type="text" id="urlInput" placeholder="https://example.com" value="https://example.com">
+        <button onclick="loadURL()">Go</button>
+        <select id="deviceSelect" onchange="changeDevice()">
+            <option value="375x667">iPhone SE (375x667)</option>
+            <option value="414x896">iPhone XR (414x896)</option>
+            <option value="360x800">Pixel 7 (360x800)</option>
+            <option value="1024x1366">iPad Pro (1024x1366)</option>
+        </select>
+        <button onclick="toggleOrientation()">Rotate</button>
+    </div>
+
+    <div class="emulator-container">
+        <div id="deviceFrame" class="iphone-se">
+            <iframe id="viewport" src="https://example.com"></iframe>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
